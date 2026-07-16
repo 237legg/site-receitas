@@ -6,14 +6,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+// 1. No Next.js 15, tipamos o params como uma Promise
 interface RecipePageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function ReceitaPage({ params }: RecipePageProps) {
-  const recipe = recipes.find((recipe) => recipe.id === params.id);
+// 2. A página agora precisa ser uma função "async"
+export default async function ReceitaPage({ params }: RecipePageProps) {
+  // 3. Aguardamos o Next.js resolver os parâmetros da URL
+  const resolvedParams = await params;
+
+  // 4. Agora sim o ID existe corretamente e vai encontrar a receita!
+  const recipe = recipes.find((recipe) => recipe.id === resolvedParams.id);
 
   if (!recipe) {
     return notFound();
@@ -43,7 +49,6 @@ export default function ReceitaPage({ params }: RecipePageProps) {
 
           {/* Descrição da receita */}
           <div className="flex flex-col gap-6 p-6">
-            {/* titulo e descrição */}
             <div>
               <h1 className="text-3xl font-bold">{recipe.title}</h1>
               <p>{recipe.description}</p>
