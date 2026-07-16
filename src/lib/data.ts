@@ -86,7 +86,7 @@ export const recipes: Recipe[] = [
     title: "Salada Caprese",
     description:
       "Uma salada italiana clássica com tomate, mussarela de búfala e manjericão fresco.",
-    image: "/receitas/salada-caprese.jpg",
+    image: "/receitas/salada.png",
     prepTime: "10 minutos",
     cookTime: "0 minutos",
     servings: 2,
