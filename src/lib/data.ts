@@ -17,7 +17,7 @@ export const recipes: Recipe[] = [
     title: "Bolo de Chocolate",
     description:
       "Um delicioso bolo de chocolate fofinho e úmido, perfeito para qualquer ocasião.",
-    image: "/receitas/bolo-chocolate.png",
+    image: "/receitas/bolo.png",
     prepTime: "15 minutos",
     cookTime: "35 minutos",
     servings: 8,
@@ -50,7 +50,7 @@ export const recipes: Recipe[] = [
     title: "Risoto de Cogumelos",
     description:
       "Um risoto cremoso com cogumelos frescos e parmesão, perfeito para um jantar especial.",
-    image: "/receitas/risoto-cogumelos.png",
+    image: "/receitas/risoto.png",
     prepTime: "10 minutos",
     cookTime: "30 minutos",
     servings: 4,
@@ -86,7 +86,7 @@ export const recipes: Recipe[] = [
     title: "Salada Caprese",
     description:
       "Uma salada italiana clássica com tomate, mussarela de búfala e manjericão fresco.",
-    image: "/receitas/salada-caprese.png",
+    image: "/receitas/salada-caprese.jpg",
     prepTime: "10 minutos",
     cookTime: "0 minutos",
     servings: 2,
@@ -103,6 +103,7 @@ export const recipes: Recipe[] = [
       "Em um prato, alterne as fatias de tomate e mussarela.",
       "Distribua as folhas de manjericão por cima.",
       "Regue com azeite de oliva e vinagre balsâmico.",
+      "Tempere com sal e pimenta a gosto.",
       "Sirva imediatamente.",
     ],
     category: "Entradas",
